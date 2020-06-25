@@ -1,0 +1,80 @@
+﻿@model WebApplication.Films
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Films</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameFilm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameFilm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisanieFilm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisanieFilm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateExitFilm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateExitFilm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BudgetFilm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BudgetFilm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prodolgitelnost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prodolgitelnost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberCountry)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
